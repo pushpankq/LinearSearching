@@ -13,7 +13,7 @@ func linearSearching(array:[Int], searchElement:Int) -> Int {
     
     if array.isEmpty {
         
-        return 0
+        return -1
         
     } else {
         
@@ -26,10 +26,19 @@ func linearSearching(array:[Int], searchElement:Int) -> Int {
         }
     }
     
-    return 0
+    return -1
 }
 
 let index = linearSearching(array: array, searchElement: searchItem)
-print(index)
+
+if index == -1 {
+
+    print("\(searchItem) is not found")
+
+} else {
+
+    print("\(searchItem) is at index \(index)")
+
+}
 
 
